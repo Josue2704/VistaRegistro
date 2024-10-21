@@ -1,0 +1,26 @@
+<form (ngSubmit)="registrarAsistente()" class="container mt-5">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre:</label>
+      <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" required class="form-control" />
+    </div>
+  
+    <div class="mb-3">
+      <label for="email" class="form-label">Email:</label>
+      <input type="email" id="email" [(ngModel)]="email" name="email" required class="form-control" />
+    </div>
+  
+    <div class="mb-3">
+      <label for="evento_id" class="form-label">ID del Evento:</label>
+      <input type="number" id="evento_id" [(ngModel)]="evento_id" name="evento_id" required class="form-control" />
+    </div>
+  
+    <button type="submit" class="btn btn-primary w-100">Registrar</button>
+  </form>
+  
+  <div *ngIf="qrCodeBase64" class="text-center mt-4">
+    <h3>Código QR Generado:</h3>
+    <img [src]="qrCodeBase64" alt="Código QR" class="img-thumbnail" />
+  </div>
+  
+  
+  
